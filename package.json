@@ -1,0 +1,33 @@
+{
+  "name": "simple-js-wdio-bdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/wdio wdio.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://giriva@github.com/giriva/simple-js-wdio-bdd.git"
+  },
+  "author": "Giriprasad Vasudevan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giriva/simple-js-wdio-bdd/issues"
+  },
+  "homepage": "https://github.com/giriva/simple-js-wdio-bdd#readme",
+  "devDependencies": {
+    "@wdio/cli": "^5.10.9",
+    "@wdio/dot-reporter": "^5.9.3",
+    "@wdio/local-runner": "^5.10.9",
+    "@wdio/mocha-framework": "^5.10.8",
+    "@wdio/selenium-standalone-service": "^5.9.3",
+    "@wdio/spec-reporter": "^5.9.3",
+    "@wdio/sync": "^5.10.8",
+    "chai": "^4.2.0",
+    "chai-webdriverio": "^1.0.0",
+    "chromedriver": "^75.0.0",
+    "wdio-chromedriver-service": "^5.0.2",
+    "webdriverio": "^5.10.9"
+  }
+}
