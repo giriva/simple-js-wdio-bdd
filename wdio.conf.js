@@ -17,7 +17,8 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/specs/**/*.js'
+        // './test/specs/**/*.js'
+        './test/**/*.feature',
     ],
     // Patterns to exclude.
     exclude: [
@@ -115,7 +116,7 @@ exports.config = {
     //
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
-    framework: 'mocha',
+    framework: 'cucumber',
     //
     // The number of times to retry the entire specfile when it fails as a whole
     // specFileRetries: 1,
@@ -128,10 +129,25 @@ exports.config = {
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
-    mochaOpts: {
-        ui: 'bdd',
-        timeout: 60000
-    },
+    cucumberOpts: {
+        backtrace: false,
+        compiler: [
+          'js:babel-register',
+        ],
+        failAmbiguousDefinitions: true,
+        failFast: true,
+        ignoreUndefinedDefinitions: false,
+        strict: true,
+        tagExpression: 'not @Pending',
+        timeout: 20000,
+        profile: [],
+        source: true,
+        require: [
+            './test/steps/find-mortgage-rate.js',
+        ],
+        snippetSyntax: undefined,
+
+      },
     //
     // =====
     // Hooks

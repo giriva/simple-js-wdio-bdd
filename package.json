@@ -1,5 +1,5 @@
 {
-  "name": "simple-js-wdio-bdd",
+  "name": "wdio-cucumber",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -25,9 +25,9 @@
     "@wdio/spec-reporter": "^5.9.3",
     "@wdio/sync": "^5.10.8",
     "chai": "^4.2.0",
-    "chai-webdriverio": "^1.0.0",
     "chromedriver": "^75.0.0",
     "wdio-chromedriver-service": "^5.0.2",
+    "wdio-cucumber-framework": "^2.2.8",
     "webdriverio": "^5.10.9"
   }
 }

@@ -2,12 +2,11 @@ Feature: Find a mortgage rate
   As a new customer
   I want to find the mortgage rates available
   So that I can decide whether to switch my mortgage to Nationwide
-
-  @Pending
-  Scenario outline: Find mortgage rates
-    Given I open the url "https://www.nationwide.co.uk"
+  
+  Scenario Outline: Find mortgage rates
+    Given we launch the homepage
     And click on Mortgages
-    And click New mortgage customer:
+    And click New mortgage customer
     And click Mortgage rates
     And select Nationwide mortgage to No
     And select lender to Changing lender
@@ -22,5 +21,5 @@ Feature: Find a mortgage rate
     Then next page heading is displayed as "Start your remortgage application"
 
     Examples:
-    |property_value|mortgage_amount |terms|
-    |300,000       |  150000        | 30  |
+    |property_value  |mortgage_amount  |terms|
+    |300,000         |150000         | 30  |
