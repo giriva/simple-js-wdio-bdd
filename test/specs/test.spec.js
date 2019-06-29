@@ -1,7 +1,7 @@
 describe('ASOS homepage', () => {
     it('should display the correct homepage title', () => {
-        browser.url('http://asos.com');
+        browser.url('https://www.nationwide.co.uk');
         const title = browser.getTitle();
-        assert.equal(title, 'ASOS | Online Shopping for the Latest Clothes & Fashion');
+        assert.equal(title, 'Nationwide Building Society | building society, nationwide');
     });
 });
