@@ -27,7 +27,9 @@
     "chai": "^4.2.0",
     "chai-webdriverio": "^1.0.0",
     "chromedriver": "^75.0.0",
-    "wdio-chromedriver-service": "^5.0.2",
     "webdriverio": "^5.10.9"
+  },
+  "dependencies": {
+    "expect": "^24.8.0"
   }
 }
