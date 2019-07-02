@@ -4,23 +4,21 @@ Feature: Find a mortgage rate
   So that I can decide whether to switch my mortgage to Nationwide
 
   @Pending
-  Scenario outline: Find mortgage rates
-    Given I open the url "https://www.nationwide.co.uk"
-    And click on Mortgages
-    And click New mortgage customer:
-    And click Mortgage rates
-    And select Nationwide mortgage to No
-    And select lender to Changing lender
-    And set property value as <property_value>
-    And set mortgage amount as <mortgage_amount>
-    And set term year as <terms>
+  Scenario: Find mortgage rates
+    Given I launch nbs applicaion with url "https://www.nationwide.co.uk"
+    And I click on Mortgages
+    And I click New mortgage customer
+    And I select Morgagte rates
+    And I select No button
+    And I select changing lender button
+    And I Input property value
+    And I Input Morgage Amount
+    And I Input Term value
+    And I press find a mortgage rate button
+    And I select Fixed rate
     And select mortgage type as fixed rate
-    And select product fee as with fee
-    Then select 5 years fixed from the result
-    And click More info and apply
-    And click Apply button
-    Then next page heading is displayed as "Start your remortgage application"
-
-    Examples:
-    |property_value|mortgage_amount |terms|
-    |300,000       |  150000        | 30  |
+    And I select Product fee
+    Then I select Deal period
+    And I select More info and apply link
+    And I press apply button
+    Then I expect to see Start your mortgage application text
