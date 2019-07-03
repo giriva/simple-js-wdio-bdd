@@ -10,11 +10,13 @@ describe('Nationwide homepage', () => {
     });
 
     it('I click on mortgate', () => {
-        const link = $('#MortgagesNavItem');
+        const link = $('#MortgagesNavItem > a > span');
         link.click();
-        //should be changed to moveTo and click the first item
+        console.log(link.getText());
+
         // const first = $('=Mortgage rates');
         // console.log(first.getText());
+        // first.waitForDisplayed(5000);
         // first.click();
     });
 
