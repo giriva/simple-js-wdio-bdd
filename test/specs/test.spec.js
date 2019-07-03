@@ -73,22 +73,29 @@ describe('Nationwide homepage', () => {
     it('I select Fixed rate', () => {
         const paragraph = $('#fixed > label');
         paragraph.waitForDisplayed(5000);
-        console.log(paragraph.getText());
+        // console.log(paragraph.getText());
         // paragraph.click();
+        browser.execute(function() {
+            document.getElementById("fixed").click();
+        });
     });
 
     it('I select Deal period', () => {
         const paragraph = $('#deal-five > label');
         paragraph.waitForDisplayed(5000);
         console.log(paragraph.getText());
-        // paragraph.click();
+        browser.execute(function() {
+            document.getElementById("deal-five").click();
+        });
     });
 
     it('I select Product fee', () => {
         const paragraph = $('#product-fee-fee > label');
         paragraph.waitForDisplayed(5000);
         console.log(paragraph.getText());
-        // paragraph.click();
+        browser.execute(function() {
+            document.getElementById("product-fee-fee").click();
+        });
     });
 
     it('I select More info and apply link', () => {
