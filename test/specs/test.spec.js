@@ -108,13 +108,29 @@ describe('Nationwide homepage', () => {
         const closed_button_1 = $('div.ratesTableWrapper:nth-child(7) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > th:nth-child(8) > a:nth-child(1) > span:nth-child(3)');
         closed_button_1.waitForExist(20000);
         closed_button_1.waitForDisplayed(60000);
-        // closed_button_1.click();
+
+        const more_info_button = $('#NewMortgageRateTables > div > div > table > tbody > tr:nth-child(1) > th.showHideCell.doNotPrint > a > span.triggerText');
+        more_info_button.waitForExist(20000);
+        more_info_button.waitForDisplayed(60000);
+        console.log(more_info_button.getText());
+        browser.pause(4000)
+        more_info_button.click();
+        browser.pause(4000)
+
+        // browser.execute(function() {
+        //     let elements = document.getElementsByClassName("toggleMoreDetails desktop");
+        //     elements.item(3).click();
+        //     browser.pause(50000)
+        // });
+        
     });
 
     it('I press apply button', () => {
-        // const link = $('=Apply');
-        // console.log(link.getText()); 
-        // link.click();
+        const apply_button = $('=Apply');
+        console.log(apply_button.getText());
+        apply_button.waitForExist(20000);
+        apply_button.waitForDisplayed(60000);
+        apply_button.click();
     });
 
     it('I expect to see Start your mortgage application text', () => {
