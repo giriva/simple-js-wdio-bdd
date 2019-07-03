@@ -113,9 +113,9 @@ describe('Nationwide homepage', () => {
         more_info_button.waitForExist(20000);
         more_info_button.waitForDisplayed(60000);
         console.log(more_info_button.getText());
-        browser.pause(4000)
+        browser.pause(3000)
         more_info_button.click();
-        browser.pause(4000)
+        browser.pause(3000)
 
         // browser.execute(function() {
         //     let elements = document.getElementsByClassName("toggleMoreDetails desktop");
@@ -134,7 +134,6 @@ describe('Nationwide homepage', () => {
     });
 
     it('I expect to see Start your mortgage application text', () => {
-        browser.url('https://www.nationwide.co.uk/products/mortgages/remortgage-to-nationwide/ready-to-apply')
         const header = $('h1=Start your Remortgage application');
         console.log(header.getText());
         expect(header.getText()).to.be.equal('Start your Remortgage application');
